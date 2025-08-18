@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Classcom Agency</title>
+  <meta name="description" content="Demandez un devis pour vos projets design, web, cybersécurité ou IA." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact • Classcom Agency">
+  <meta property="og:description" content="Demandez un devis pour vos projets design, web, cybersécurité ou IA.">
+  <meta property="og:image" content="assets/img/logo.svg">
+  <link rel="canonical" href="https://www.classcom.example/">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container row between center">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.svg" alt="Classcom Agency logo" width="120" height="30" />
+        <span class="sr-only">Classcom Agency</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <div class="container">
+        <h1>Contact & Devis</h1>
+        <p>Remplissez le formulaire, nous revenons vers vous sous 24-48h ouvrées.</p>
+
+        <form id="contact-form" class="form" method="POST" action="https://formspree.io/f/your-id">
+          <div class="grid-2">
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input id="nom" name="nom" type="text" required minlength="2" autocomplete="family-name">
+            </div>
+            <div class="field">
+              <label for="prenom">Prénom</label>
+              <input id="prenom" name="prenom" type="text" required minlength="2" autocomplete="given-name">
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" inputmode="email">
+            </div>
+            <div class="field">
+              <label for="tel">Téléphone</label>
+              <input id="tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" pattern="^[0-9+().\-\s]{6,}$" placeholder="+229 ...">
+            </div>
+          </div>
+          <div class="field">
+            <label for="entreprise">Agence / Entreprise</label>
+            <input id="entreprise" name="entreprise" type="text" required minlength="2" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="service">Service demandé</label>
+            <select id="service" name="service" required>
+              <option value="" selected disabled>Choisir un service…</option>
+              <option>Conception Graphique</option>
+              <option>Développement Web & Apps</option>
+              <option>Cybersécurité</option>
+              <option>Intelligence Artificielle</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Décrivez brièvement votre besoin…"></textarea>
+          </div>
+
+          <!-- Honeypot (anti-spam) -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Ne pas remplir</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <p id="form-feedback" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div class="contact-infos">
+          <h2>Nos coordonnées</h2>
+          <ul class="list">
+            <li>Email : <a href="mailto:contact@classcom.agency">contact@classcom.agency</a></li>
+            <li>Téléphone : <a href="tel:+2290192188436">+229 01 92 18 84 36</a></li>
+            <li>Réseaux : <a href="#">Facebook</a> · <a href="#">LinkedIn</a> · <a href="#">X</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container grid-3">
+      <div>
+        <img src="assets/img/logo.svg" alt="" width="96" height="24" />
+        <p class="muted">Boostez votre présence digitale avec des solutions sur mesure.</p>
+        <div class="socials">
+          <a aria-label="Facebook" href="#" rel="noopener">FB</a>
+          <a aria-label="LinkedIn" href="#" rel="noopener">IN</a>
+          <a aria-label="X" href="#" rel="noopener">X</a>
+        </div>
+      </div>
+      <div>
+        <h4>Liens</h4>
+        <ul class="list">
+          <li><a href="services.html">Nos services</a></li>
+          <li><a href="contact.html">Demander un devis</a></li>
+          <li><a href="legal.html">Mentions légales</a></li>
+          <li><a href="cgu.html">CGU</a></li>
+          <li><a href="privacy.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter" method="post" action="#" onsubmit="return false">
+          <label class="sr-only" for="news-email">Votre e-mail</label>
+          <input id="news-email" type="email" placeholder="Votre e-mail" required>
+          <button type="submit" class="btn btn-primary">S'abonner</button>
+        </form>
+      </div>
+    </div>
+    <div class="copy">© 2025 Classcom Agency — Tous droits réservés.</div>
+  </footer>
+  <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie banner" hidden>
+    <p>Nous utilisons des cookies pour améliorer votre expérience. <a href="privacy.html">En savoir plus</a>.</p>
+    <button id="cookie-accept" class="btn btn-primary">Accepter</button>
+  </div>
+</body>
+</html>
+
